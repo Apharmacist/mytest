@@ -1,0 +1,85 @@
+一，创建项目
+	1，在合适的位置创建一个目录
+	2，在黑屏终端进入到上一步创建的目录下
+	3，输入django-admin startproject 项目名
+	4，目录层级说明：
+		manage.py  一个命令行工具，可以是我们用多种方式对Django项目进行交互
+		firstproject目录
+			__init__.py 一个空文件，他告诉python，这个目录应该被看做一个python包
+			settings.py 项目配置文件
+			urls.py 项目的URL声明
+			wsgi.py 项目与WSGI兼容的web服务器入口
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+二，基本操作
+	1，设计表结构
+		班级表结构
+			表名		grade		
+			字段		班级名称			gname
+					班级成立时间		gdate
+					女生总数			ggirlnum
+					男生总数			gboynum
+					是否删除			isDelete		
+		学生表结构 
+			表名		student			
+			字段		学生姓名			sname
+					性别				sgender
+					年龄				sage
+					简介				scontent
+					班级 			sgrade 		
+					是否删除			isDelete
+
+	2,配置数据库 注意：Django默认使用SQLite数据
+		在settings.py文件中，通过DATABASE选项进行数据库配置
+		配置MySql
+			python3，安装的是PyMySQL
+			在__init.py__中写入两行代码
+				import pymysql
+				pymysql.install_as_MySQLdb()
+			格式
+				DATABASES = {
+    			'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "xiha",
+        'USER': "root",
+        'PASSWORD': "GJ.580231",
+        'HOST': "localhost",
+        'PORT': "3306",
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
