@@ -1,0 +1,38 @@
+创建用户：
+	git config global --user.name "github名字"
+创建邮箱：
+	git config global --user.email "邮箱"
+创建本地仓库：
+	1.git 文件目录
+	2.git init   将目录设置为仓库
+项目提交：
+	1.git add 项目名    添加项目至仓库
+	2.git commit -m “信息注释”
+	3.git status 状态查看
+	4.git diff 修改查看
+	5.git log  查看提交日记
+	//git log  --pretty=oneline 显示提交次数
+版本回退
+	1，git reset --hard HEAD^ #回到上一个版本
+	2，git reset --hard HEAD^^ #回到上上一个版本
+	3，git reset --hard HEAD~100 #回到前100个版本
+	4，git reset --hard 具体版本号 #回到具体某一版本
+工作区和版本库
+	1，将工作修改的文件 add到版本库的暂存区
+	2，将暂存区的文件 commit到master中
+	3，git checkout --fileName #撤销
+		//若文件没有add到暂存区则撤销到工作区之前的版本
+		//若文件add到暂存区则撤销到暂存区之前的版本
+		///就是说让版本回退到git add或git commit时 的版本
+远程仓库
+	1，创建SSH key
+
+
+
+
+
+创建远程仓库
+     //在GitHub上创建新的远程库，关联远程库
+     //git remote add origin git@github.com:Apharmacist/mytest.git
+	1，git pull origin master --allow-unrelated-histories
+	2，git push origin master
