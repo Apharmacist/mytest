@@ -26,6 +26,7 @@
 		///就是说让版本回退到git add或git commit时 的版本
 远程仓库
 	1，创建SSH key
+		ssh-keygen -t rsa -C 邮箱
 
 
 
@@ -33,6 +34,7 @@
 
 创建远程仓库
      //在GitHub上创建新的远程库，关联远程库
-     //git remote add origin git@github.com:Apharmacist/mytest.git
+     //Windows  git remote add origin git@github.com:Apharmacist/mytest.git
+     //Mac    git clone git@github.com:Apharmacist/easy_socket.git
 	1，git pull origin master --allow-unrelated-histories
 	2，git push origin master
